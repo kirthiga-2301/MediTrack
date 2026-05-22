@@ -46,18 +46,19 @@ function DoctorList() {
   }
 
   return (
+    <div className="p-8 md:p-12 w-full max-w-7xl mx-auto">
+      <div className="mb-10">
+        <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight">
+          Doctors Dashboard
+        </h1>
+        <p className="text-gray-500 mt-2 text-lg">
+          View and manage all hospital specialists
+        </p>
+      </div>
 
-    <div className="min-h-screen bg-gray-100 p-6">
-
-      <h1 className="text-4xl font-bold text-center text-gray-900 mb-10">
-        Our Medical Specialists
-      </h1>
-
-      <div className="flex flex-col gap-4 max-w-5xl mx-auto">
-
+      <div className="flex flex-col gap-4">
         {
           doctors.map((doctor) => (
-
             <DoctorCard
               key={doctor.id}
               doctor={doctor}
@@ -65,9 +66,7 @@ function DoctorList() {
             />
           ))
         }
-
       </div>
-
     </div>
   )
 }
