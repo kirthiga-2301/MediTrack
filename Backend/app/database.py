@@ -1,0 +1,15 @@
+from motor.motor_asyncio import AsyncIOMotorClient
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+MONGO_URL = os.getenv("MONGO_URL")
+DATABASE_NAME = os.getenv("DATABASE_NAME")
+
+client = AsyncIOMotorClient(MONGO_URL)
+
+database = client[DATABASE_NAME]
+
+doctor_collection = database["doctors"]
+patient_collection = database["patients"]
