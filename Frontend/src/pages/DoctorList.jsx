@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import DoctorCard from "../components/DoctorCard"
 import Spinner from "../components/Spinner"
 import ErrorMessage from "../components/ErrorMessage"
+import Sidebar from "../components/Sidebar"
 
 import { fetchDoctors } from "../services/api"
 
@@ -22,15 +23,20 @@ function DoctorList() {
 
         setDoctors(data)
 
-      } catch (error) {
+      }
+
+      catch (error) {
 
         setError("Failed to fetch doctors")
 
-      } finally {
+      }
+
+      finally {
 
         setLoading(false)
 
       }
+
     }
 
     getDoctorsData()
@@ -46,29 +52,53 @@ function DoctorList() {
   }
 
   return (
-    <div className="p-8 md:p-12 w-full max-w-7xl mx-auto">
-      <div className="mb-10">
-        <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight">
-          Doctors Dashboard
-        </h1>
-        <p className="text-gray-500 mt-2 text-lg">
-          View and manage all hospital specialists
-        </p>
-      </div>
 
-      <div className="flex flex-col gap-4">
+    <div
+      style={{
+        display: "flex",
+        backgroundColor: "#f3f4f6",
+        minHeight: "100vh"
+      }}
+    >
+
+      <Sidebar />
+
+      <div
+        style={{
+          flex: 1,
+          padding: "30px"
+        }}
+      >
+
+        <h1
+          style={{
+            fontSize: "32px",
+            fontWeight: "bold",
+            color: "#111827",
+            marginBottom: "30px"
+          }}
+        >
+          MediTrack
+        </h1>
+
         {
           doctors.map((doctor) => (
+
             <DoctorCard
               key={doctor.id}
               doctor={doctor}
               patientCount={doctor.patient_count || 0}
             />
+
           ))
         }
+
       </div>
+
     </div>
+
   )
+
 }
 
 export default DoctorList

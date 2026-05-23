@@ -1,0 +1,91 @@
+.sidebar {
+    width: 260px;
+    min-height: 100vh;
+    background-color: #071133;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    color: #3b82f6;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.portal-text {
+    color: #9ca3af;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    font-size: 13px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.active-menu {
+    background: linear-gradient(to right, #7c3aed, #4f46e5);
+}
+
+.sidebar-section-title {
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.doctors-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.doc-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.doc-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.active-doc {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-weight: 500;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status-dot.available {
+    background-color: #10b981;
+}
+
+.status-dot.unavailable {
+    background-color: #9ca3af;
+}

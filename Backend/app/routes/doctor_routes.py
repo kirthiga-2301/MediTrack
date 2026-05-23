@@ -7,13 +7,7 @@ from app.services.doctor_service import (
     get_patients_by_doctor
 )
 
-from app.data.doctors import doctors
-from app.data.patients import patients
-
-from app.database import (
-    doctor_collection,
-    patient_collection
-)
+from app.database import doctor_collection
 
 router = APIRouter()
 
@@ -49,16 +43,25 @@ async def fetch_doctor_patients(doctor_id: int):
     return await get_patients_by_doctor(doctor_id)
 
 
-@router.post("/seed-data")
-async def seed_data():
+@router.post("/doctors", tags=["Doctors"])
+async def add_doctor(doctor: dict):
 
-    await doctor_collection.delete_many({})
-    await patient_collection.delete_many({})
-
-    await doctor_collection.insert_many(doctors)
-
-    await patient_collection.insert_many(patients)
+    await doctor_collection.insert_one(doctor)
 
     return {
-        "message": "Data inserted successfully"
+        "message": "Doctor added successfully"
+    }
+
+
+@router.post("/patients", tags=["Patients"])
+async def add_patient(patient: dict):
+
+    # Need to import patient_collection at the top, or use the service
+    from app.database import patient_collection
+    
+    # Simple insert for now, assuming they provide doctor_id
+    await patient_collection.insert_one(patient)
+
+    return {
+        "message": "Patient added successfully"
     }

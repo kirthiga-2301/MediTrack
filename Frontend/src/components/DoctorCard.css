@@ -1,0 +1,78 @@
+.doctor-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px 35px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #dddddd;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.doctor-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.status-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.available-dot {
+    background-color: #22c55e;
+}
+
+.unavailable-dot {
+    background-color: #9ca3af;
+}
+
+.doctor-name {
+    font-size: 32px;
+    color: #1f2937;
+    margin-bottom: 5px;
+}
+
+.doctor-specialization {
+    color: #4f46e5;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.doctor-info {
+    color: #6b7280;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.doctor-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.availability {
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.available {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.unavailable {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.doctor-link {
+    text-decoration: none;
+    font-size: 28px;
+    color: #4f46e5;
+}
