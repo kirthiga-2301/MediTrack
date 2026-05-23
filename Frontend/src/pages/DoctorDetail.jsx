@@ -107,7 +107,9 @@ function DoctorDetail() {
 
           <h1
             style={{
-              fontSize: "32px",
+              fontSize: "28px",
+              fontWeight: "600",
+              color: "#1f2937",
               marginBottom: "10px"
             }}
           >
@@ -151,7 +153,9 @@ function DoctorDetail() {
 
         <h2
           style={{
-            fontSize: "24px",
+            fontSize: "22px",
+            fontWeight: "600",
+            color: "#374151",
             marginBottom: "20px"
           }}
         >
@@ -194,13 +198,21 @@ Condition: ${patient.condition}`
                 }}
               >
 
-                <h3>{patient.name}</h3>
+                <h3 style={{ fontSize: "18px", color: "#1f2937", marginBottom: "8px", fontWeight: "600" }}>
+                  {patient.name}
+                </h3>
 
-                <p>Age: {patient.age}</p>
+                <p style={{ fontSize: "15px", color: "#4b5563", marginBottom: "4px" }}>
+                  <span style={{ fontWeight: "500", color: "#374151" }}>Age:</span> {patient.age}
+                </p>
 
-                <p>Blood Group: {patient.blood_group}</p>
+                <p style={{ fontSize: "15px", color: "#4b5563", marginBottom: "4px" }}>
+                  <span style={{ fontWeight: "500", color: "#374151" }}>Blood Group:</span> {patient.blood_group}
+                </p>
 
-                <p>Condition: {patient.condition}</p>
+                <p style={{ fontSize: "15px", color: "#4b5563" }}>
+                  <span style={{ fontWeight: "500", color: "#374151" }}>Condition:</span> {patient.condition}
+                </p>
 
               </div>
 

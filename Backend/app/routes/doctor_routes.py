@@ -56,10 +56,8 @@ async def add_doctor(doctor: dict):
 @router.post("/patients", tags=["Patients"])
 async def add_patient(patient: dict):
 
-    # Need to import patient_collection at the top, or use the service
     from app.database import patient_collection
     
-    # Simple insert for now, assuming they provide doctor_id
     await patient_collection.insert_one(patient)
 
     return {

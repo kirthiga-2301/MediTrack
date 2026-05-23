@@ -24,7 +24,7 @@ function Sidebar() {
     <div className="sidebar">
       <div>
         <h1 className="logo">
-          MediSync
+          MediTrack
         </h1>
         <p className="portal-text">
           ADMIN PORTAL

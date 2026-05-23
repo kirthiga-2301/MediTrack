@@ -8,6 +8,13 @@
     align-items: center;
     border: 1px solid #dddddd;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.doctor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .doctor-left {
@@ -31,7 +38,8 @@
 }
 
 .doctor-name {
-    font-size: 32px;
+    font-size: 24px;
+    font-weight: 600;
     color: #1f2937;
     margin-bottom: 5px;
 }
