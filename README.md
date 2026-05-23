@@ -1,8 +1,8 @@
-# 🏥 MediTrack
+#  MediTrack
 
 Welcome to **MediTrack**! A comprehensive full-stack application designed to seamlessly manage doctors and patients.
 
-## 🚀 Tech Stack
+##  Tech Stack
 
 ### Frontend
 - **Framework:** React with Vite
@@ -17,7 +17,7 @@ Welcome to **MediTrack**! A comprehensive full-stack application designed to sea
 
 ---
 
-## ✨ Features
+##  Features
 
 - **Doctor Management:** View a list of doctors, see detailed profiles, and add new doctors to the system.
 - **Patient Management:** View all patients and manage patients assigned to specific doctors.
@@ -26,7 +26,7 @@ Welcome to **MediTrack**! A comprehensive full-stack application designed to sea
 
 ---
 
-## 🛠️ Getting Started
+##  Getting Started
 
 Follow these steps to get the project up and running on your local machine.
 
@@ -105,8 +105,8 @@ The frontend will be available at `http://localhost:5173`.
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
 
-## 📝 License
+##  License
 This project is open-source and available under the [MIT License](LICENSE).
