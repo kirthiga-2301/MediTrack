@@ -6,7 +6,7 @@ Welcome to **MediTrack**! A comprehensive full-stack application designed to sea
 
 ### Frontend
 - **Framework:** React with Vite
-- **Styling:** Tailwind CSS
+- **Styling:** CSS
 - **Routing:** React Router DOM
 - **HTTP Client:** Axios
 
