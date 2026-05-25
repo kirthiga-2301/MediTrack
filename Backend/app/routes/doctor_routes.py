@@ -46,7 +46,8 @@ async def fetch_doctor_patients(doctor_id: int):
 @router.post("/doctors", tags=["Doctors"])
 async def add_doctor(doctor: dict):
 
-    await doctor_collection.insert_one(doctor)
+    from app.services.doctor_service import create_doctor
+    await create_doctor(doctor)
 
     return {
         "message": "Doctor added successfully"
@@ -56,9 +57,8 @@ async def add_doctor(doctor: dict):
 @router.post("/patients", tags=["Patients"])
 async def add_patient(patient: dict):
 
-    from app.database import patient_collection
-    
-    await patient_collection.insert_one(patient)
+    from app.services.doctor_service import create_patient
+    await create_patient(patient)
 
     return {
         "message": "Patient added successfully"

@@ -56,6 +56,7 @@ function DoctorList() {
     <div
       style={{
         display: "flex",
+        flexDirection: "column",
         backgroundColor: "#f3f4f6",
         minHeight: "100vh"
       }}

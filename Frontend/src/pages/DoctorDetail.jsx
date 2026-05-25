@@ -69,6 +69,7 @@ function DoctorDetail() {
     <div
       style={{
         display: "flex",
+        flexDirection: "column",
         backgroundColor: "#f3f4f6",
         minHeight: "100vh"
       }}
@@ -151,16 +152,32 @@ function DoctorDetail() {
 
         </div>
 
-        <h2
-          style={{
-            fontSize: "22px",
-            fontWeight: "600",
-            color: "#374151",
-            marginBottom: "20px"
-          }}
-        >
-          Assigned Patients
-        </h2>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
+          <h2
+            style={{
+              fontSize: "22px",
+              fontWeight: "600",
+              color: "#374151",
+              margin: 0
+            }}
+          >
+            Assigned Patients
+          </h2>
+          <Link
+            to="/patients/add"
+            style={{
+              backgroundColor: "#4f46e5",
+              color: "white",
+              padding: "8px 16px",
+              borderRadius: "8px",
+              textDecoration: "none",
+              fontSize: "14px",
+              fontWeight: "500"
+            }}
+          >
+            + Add Patient
+          </Link>
+        </div>
 
         <div
           style={{
